@@ -11,18 +11,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CloudToRain">
 
+        <!-- ✅ Launches first -->
         <activity
-            android:name=".MainActivity"
-            android:exported="true"> <!-- 👈 this fixes the error -->
+            android:name=".TitleActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <!-- ✅ Still accessible, but not launcher -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+
         <activity android:name=".QuizActivity" />
         <activity android:name=".GameActivity" />
-
     </application>
 
 </manifest>
