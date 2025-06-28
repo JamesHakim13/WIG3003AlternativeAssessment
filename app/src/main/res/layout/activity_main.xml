@@ -21,12 +21,13 @@
     <!-- Cloud -->
     <ImageView
         android:id="@+id/cloud"
-        android:layout_width="160dp"
-        android:layout_height="100dp"
+        android:layout_width="274dp"
+        android:layout_height="177dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:src="@drawable/cloud"
-        android:contentDescription="Cloud" />
+        android:layout_marginTop="120dp"
+        android:contentDescription="Cloud"
+        android:src="@drawable/cloud" />
+
 
     <!-- Rain (Initially Hidden) -->
     <ImageView
@@ -35,12 +36,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/cloud"
         android:layout_centerHorizontal="true"
-        android:contentDescription="Rain"
-        android:src="@drawable/rain_anim"
-        android:rotation="45"
         android:visibility="invisible"
-        android:scaleX="0.5"
-        android:scaleY="0.5"/>
+        android:layout_alignStart="@id/cloud"
+        android:layout_alignEnd="@id/cloud"
+        android:contentDescription="Rain"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:rotation="20"/>
 
 
     <!-- Narration status -->

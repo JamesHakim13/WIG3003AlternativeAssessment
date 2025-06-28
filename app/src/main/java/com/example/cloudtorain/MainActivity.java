@@ -6,6 +6,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.view.View;
 import android.graphics.drawable.AnimationDrawable;
+import android.view.animation.TranslateAnimation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -39,11 +40,21 @@ public class MainActivity extends AppCompatActivity {
         cloud.setOnClickListener(v -> {
             if (isEvaporated) {
                 statusText.setText("Cloud is full, it's raining!");
+
+                // Show rain image & start frame animation
                 rain.setVisibility(View.VISIBLE);
                 rain.setBackgroundResource(R.drawable.rain_anim);
                 rainAnimation = (AnimationDrawable) rain.getBackground();
                 rainAnimation.start();
-                //playNarration(R.raw.precipitation); // Add rain narration
+
+                // 🟦 Start falling movement
+                TranslateAnimation fall = new TranslateAnimation(0, 0, 0, 300);
+                fall.setDuration(800);
+                fall.setRepeatMode(TranslateAnimation.RESTART);
+                fall.setRepeatCount(TranslateAnimation.INFINITE);
+                rain.startAnimation(fall);
+
+                // playNarration(R.raw.precipitation);
             } else {
                 statusText.setText("Tap the sun first to start evaporation.");
             }
