@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class TitleActivity extends AppCompatActivity {
 
-    Button startButton;
+    Button startButton, quizButton;
     MediaPlayer introPlayer;
 
     @Override
@@ -32,6 +32,19 @@ public class TitleActivity extends AppCompatActivity {
             Intent intent = new Intent(TitleActivity.this, MainActivity.class);
             startActivity(intent);
         });
+
+            quizButton = findViewById(R.id.quizButton);
+
+            quizButton.setOnClickListener(v -> {
+                if (introPlayer != null && introPlayer.isPlaying()) {
+                    introPlayer.stop();
+                    introPlayer.release();
+                    introPlayer = null;
+                }
+
+                Intent intent = new Intent(TitleActivity.this, QuizActivity.class);
+                startActivity(intent);
+            });
 
     }
 
