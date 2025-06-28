@@ -44,6 +44,16 @@
         android:scaleY="0.8"
         android:rotation="20"/>
 
+    <ImageView
+        android:id="@+id/steam"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/steam"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:contentDescription="Evaporation Steam" />
+
 
     <!-- Narration status -->
     <TextView
@@ -52,10 +62,35 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
         android:text="Tap the sun to start evaporation!"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:padding="16dp"
         android:background="#66000000"/>
+
+    <!-- 🔁 Reset Simulation Button -->
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restart"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="32dp"
+        android:visibility="invisible" />
+
+    <!-- 🔙 Back to Title Button -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="32dp"
+        android:visibility="visible" />
 
 </RelativeLayout>

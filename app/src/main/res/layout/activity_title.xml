@@ -5,6 +5,20 @@
     android:background="@drawable/bg_scene"
     android:padding="24dp">
 
+    <!-- 📦 Dark background box -->
+    <LinearLayout
+        android:id="@+id/titleBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#66000000"
+        android:elevation="4dp"
+        android:layout_marginBottom="24dp">
+
+    <!-- Title Text -->
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
@@ -12,10 +26,9 @@
         android:text="Cloud to Rain"
         android:textSize="36sp"
         android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="120dp" />
+        android:textColor="#FFFFFF" />
 
+    <!-- Subtitle -->
     <TextView
         android:id="@+id/subTitleText"
         android:layout_width="wrap_content"
@@ -23,19 +36,18 @@
         android:text="How does rain get formed?"
         android:textSize="18sp"
         android:textColor="#FFFFFF"
-        android:layout_below="@id/titleText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp" />
+        android:layout_marginTop="4dp" />
+</LinearLayout>
 
+    <!-- Start Button -->
     <Button
-        android:id="@+id/startButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start"
-        android:layout_below="@id/subTitleText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="#FFBB33"
-        android:textColor="#000000" />
-
-</RelativeLayout>
+    android:id="@+id/startButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Start"
+    android:layout_below="@id/titleBox"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="16dp"
+    android:backgroundTint="#FFBB33"
+    android:textColor="#000000" />
+    </RelativeLayout>

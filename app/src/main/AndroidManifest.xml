@@ -27,7 +27,6 @@
             android:exported="true" />
 
         <activity android:name=".QuizActivity" />
-        <activity android:name=".GameActivity" />
     </application>
 
 </manifest>
